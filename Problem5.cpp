@@ -39,6 +39,7 @@ int main()
   int inches;
   int meters;
   double centimeters;
+  string userInput;
 
   //loop so user can continue inputting
   while(true)
@@ -48,14 +49,20 @@ int main()
     meters = 0;
     centimeters = 0;
 
-
     takeLength(feet, inches);
     calculate(feet, inches, meters, centimeters);
     output(feet, inches, meters, centimeters);
 
-
     cout << "If you would like to exit the program enter 'stop'. If you want to continue enter any other input." << endl;
     cin >> userInput;
+    if (userInput == "stop")
+    {
+      break;
+    }
+    else
+    {
+      continue;
+    }
 
   }
 }
